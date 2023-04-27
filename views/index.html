@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exercise Tracker | freeCodeCamp</title>
+    <link rel="shortcut icon" href="https://cdn.freecodecamp.org/universal/favicons/favicon.ico"  type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    
+  </body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<title>Back End Development and APIs Projects - ricardojrhc</title>
+<link rel="apple-touch-icon" sizes="180x180" href="src/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="src/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="src/favicon-16x16.png">
+<link rel="manifest" href="src/site.webmanifest">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/public/normalize.css">
+<link rel="stylesheet" href="/public/style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap" rel="stylesheet">
+<script src="/public/jquery-3.6.0.js"></script>
+<body id="main">
+<!-- My nav -->
+<nav id="navbar">
+	<div class="links">
+		<a class="logo" href="#" target="_self"><img width="100%" src="https://rykardocardoso.github.io/fwc-projetc/images/RIC_LOGO_W.svg" alt="RIC"></a>
+		<ul>
+			<li><a class="hideMobile" href="https://boilerplate-project-timestamp.rykardocardoso.repl.co/" target="_self"><i class="fa-solid fa-clock"></i> Timestamp MS</a></li>
+			<li><a class="hideMobile" href="https://boilerplate-project-headerparser.rykardocardoso.repl.co/" target="_self"><i class="fa-solid fa-code-pull-request"></i> Request Header Parser MS</a></li>
+			<li><a class="hideMobile" href="https://boilerplate-project-urlshortener.rykardocardoso.repl.co/" target="_self"><i class="fa-solid fa-code"></i> URL Shortener MS</a></li>
+			<li><a class="hideMobile" href="#" target="_self"><i class="fa-solid fa-binoculars"></i> Exercise Tracker</a></li>
+			<li><a class="hideMobile" href="#" target="_self"><i class="fa-solid fa-file"></i> File Metadata MS</a></li>
+			<li><a class="mobileMenuButton" href="#" title="Toggle Navigation Menu"><i class="fa-solid fa-bars"></i></a></li>
+		</ul>
+	</div>
+    
+    <!-- Navbar on small screens -->
+	<div id="navMobile">
+    	<a href="https://boilerplate-project-timestamp.rykardocardoso.repl.co/" class="item" target="_self"><i class="fa-solid fa-clock"></i> Timestamp MS</a>
+    	<a href="https://boilerplate-project-headerparser.rykardocardoso.repl.co/" class="item" target="_self"><i class="fa-solid fa-code-pull-request"></i> Request Header Parser MS</a>
+    	<a href="https://boilerplate-project-urlshortener.rykardocardoso.repl.co/" class="item" target="_self"><i class="fa-solid fa-code"></i> URL Shortener MS</a>
+    	<a href="#" class="item" target="_self"><i class="fa-solid fa-binoculars"></i> Exercise Tracker</a>
+		<a href="#" class="item" target="_self"><i class="fa-solid fa-file"></i> File Metadata MS</a>
+	</div>
+</nav>
+
+<!-- First Parallax Image with Logo Text -->
+<section class="featureSection" id="welcome-section">
+	<div class="mySlides" style="background-image: url('https://rykardocardoso.github.io/fwc-projetc/images/RIC_LOGO_bg.png');">
+		<figcaption>
+			<div class="title">
+				<h3><i>Back End Development and APIs Projects</i></h3>
+				<p>by Ricardojrhc</p>
+			</div>
+        <div class="visHolder-container">
+          <div class="header">
+            <h1>Exercise tracker</h1>
+          </div>
+           <div class="container">
+              <form action="/api/users" method="POST">
+                <fieldset>
+                  <h3>Create a New User</h3>
+                  <p><code>POST /api/users</code></p>
+                  <input id="uname" type="text" name="username" placeholder="username" />
+                  <input type="submit" value="Submit" />
+                </fieldset>
+              </form>
+              <form id="exercise-form" method="post">
+                <h3>Add exercises</h3>
+                <p><code>POST /api/users/:_id/exercises</code></p>
+                <input id="uid" type="text" name=":_id" placeholder=":_id" />
+                <input id="desc" type="text" name="description" placeholder="description*" />
+                <input id="dur" type="text" name="duration" placeholder="duration* (mins.)" />
+                <input id="date" type="text" name="date" placeholder="date (yyyy-mm-dd)" />
+                <input type="submit" value="Submit" />
+              </form>
+              <p>
+                <strong>GET user's exercise log: </strong>
+                <code>GET /api/users/:_id/logs?[from][&amp;to][&amp;limit]</code>
+              </p>
+              <p><strong>[ ]</strong> = optional</p>
+              <p><strong>from, to</strong> = dates (yyyy-mm-dd); <strong>limit</strong> = number</p>
+            </div>
+      		<span class="clearfix"></span>
+        </div>
+		</figcaption>
+	</div>
+</section>
+
+<footer>
+	<a class="toTop"><i style="margin-right: 15px;" class="fa fa-arrow-up"></i>To the top</a>
+	<div class="social">
+        <a href="https://www.linkedin.com/in/ricardojrhc/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+		<a href="https://www.facebook.com/RykardoMusic/" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+	</div>
+</footer>
+    <script>
+      const exerciseForm = document.getElementById("exercise-form");
+
+      exerciseForm.addEventListener("submit", () => {
+        const userId = document.getElementById("uid").value;
+        exerciseForm.action = `/api/users/${userId}/exercises`;
+
+        exerciseForm.submit();
+      });
+    </script>
+ 
+<script>
+$(function(){
+	
+// Used to toggle the menu on small screens when clicking on the menu button
+$('.mobileMenuButton').click(function(event){
+	event.preventDefault();
+	toggleMenuMobile();
+});
+
+$('#navMobile a').click(function(){
+	toggleMenuMobile();
+});
+
+function toggleMenuMobile() {
+    var x = document.getElementById("navMobile");
+    if (x.className.indexOf("active") == -1) {
+        x.className += "active";
+    } else {
+        x.className = x.className.replace("active", "");
+    }
+}
+	
+//Smooth Scroll Up function
+$('.toTop').click(function(event) {
+	event.preventDefault();
+	$('html, body').animate({scrollTop: 0}, 500, "swing");
+		return false;
+});
+
+
+});
+</script>
+
